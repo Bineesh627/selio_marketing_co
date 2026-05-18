@@ -24,7 +24,7 @@ export default function About() {
           Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-cyan to-brand-violet">Story</span>
         </h1>
         <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-          We are a collective of digital craftsmen, strategic thinkers, and creative technologists dedicated to building extraordinary brand experiences.
+          We are a team of elite creative technologists, digital marketers, and SEO specialists dedicated to engineering high-converting web experiences and rapid growth.
         </p>
       </section>
 
@@ -34,13 +34,13 @@ export default function About() {
           <div>
             <h3 className="text-3xl font-heading font-bold text-white mb-6">Our Vision</h3>
             <p className="text-gray-400 text-lg leading-relaxed">
-              To be the premier global digital agency recognized for transforming how brands connect with their audiences in the digital age. We envision a world where every digital interaction is a memorable cinematic experience.
+              To be the world's most trusted web development and performance marketing agency. We envision a future where every digital touchpoint is an engine for scaling revenue and dominating the market.
             </p>
           </div>
           <div>
             <h3 className="text-3xl font-heading font-bold text-white mb-6">Our Mission</h3>
             <p className="text-gray-400 text-lg leading-relaxed">
-              To empower visionary brands through strategic design, cutting-edge technology, and unparalleled creativity. We don't just build websites; we engineer comprehensive digital ecosystems that drive sustainable growth.
+              To empower ambitious brands through cutting-edge website development, data-driven digital marketing, and unparalleled SEO strategies. We don't just build websites; we build automated ecosystems that capture leads and drive sustainable growth.
             </p>
           </div>
         </div>

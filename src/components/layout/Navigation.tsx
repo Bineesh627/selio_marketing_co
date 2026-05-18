@@ -44,8 +44,8 @@ export function Navigation() {
           )}
         >
           {/* Left Side: Logo */}
-          <Link href="/" className="text-2xl font-heading font-bold tracking-tighter text-white z-10">
-            Selio<span className="text-brand-cyan">.</span>
+          <Link href="/" className="flex items-center z-10">
+            <img src="/selio.svg" alt="Selio Marketing Co" className="h-7 w-auto" />
           </Link>
 
           {/* Center: Desktop Nav */}

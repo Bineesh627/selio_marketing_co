@@ -9,6 +9,13 @@ export const metadata: Metadata = {
 
 const servicesList = [
   {
+    id: "web",
+    title: "Website Development",
+    desc: "High-performance, award-winning web experiences built for enterprise scale.",
+    features: ["Custom Websites", "Shopify eCommerce", "WordPress", "Landing Pages"],
+    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1000&auto=format&fit=crop"
+  },
+  {
     id: "branding",
     title: "Branding & Creative Design",
     desc: "Crafting memorable identities that resonate and stand out in the digital noise.",
@@ -35,13 +42,6 @@ const servicesList = [
     desc: "Cinematic visual storytelling that captivates and converts at scale.",
     features: ["Video Editing", "Motion Graphics", "Product Shoots", "Promotional Videos"],
     image: "https://images.unsplash.com/photo-1601506521937-0121a7fc2a6b?q=80&w=1000&auto=format&fit=crop"
-  },
-  {
-    id: "web",
-    title: "Website Development",
-    desc: "High-performance, award-winning web experiences built for enterprise scale.",
-    features: ["Custom Websites", "Shopify eCommerce", "WordPress", "Landing Pages"],
-    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1000&auto=format&fit=crop"
   }
 ];
 

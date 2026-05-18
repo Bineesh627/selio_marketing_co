@@ -40,8 +40,12 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h4 className="text-white font-bold mb-1">Email Us</h4>
-                  <p className="text-gray-400">hello@selio.agency</p>
-                  <p className="text-gray-400">careers@selio.agency</p>
+                  <a
+                    href="mailto:selioagencyy@gmail.com"
+                    className="text-gray-400 hover:text-brand-violet transition-colors"
+                  >
+                    selioagencyy@gmail.com
+                  </a>
                 </div>
               </div>
               <div className="flex items-start space-x-4">
@@ -50,7 +54,12 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h4 className="text-white font-bold mb-1">Call Us</h4>
-                  <p className="text-gray-400">+1 (555) 123-4567</p>
+                  <a
+                    href="tel:+917306260004"
+                    className="text-gray-400 hover:text-brand-cyan transition-colors"
+                  >
+                    +91 73062 60004
+                  </a>
                 </div>
               </div>
               <div className="flex items-start space-x-4">

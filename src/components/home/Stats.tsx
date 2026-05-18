@@ -1,13 +1,14 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { CountUp } from "@/components/animations/CountUp";
+import { ScrollReveal } from "@/components/animations/ScrollReveal";
 
 const stats = [
-  { value: "250+", label: "Clients Served" },
-  { value: "400%", label: "Avg. ROI Delivered" },
-  { value: "1.2k", label: "Campaigns Managed" },
-  { value: "$50M+", label: "Revenue Generated" },
+  { value: 250, suffix: "+", label: "Clients Served" },
+  { value: 400, suffix: "%", label: "Avg. ROI Delivered" },
+  { value: 1200, suffix: "+", label: "Campaigns Managed" },
+  { value: 50, prefix: "$", suffix: "M+", label: "Revenue Generated" },
 ];
 
 export function Stats() {
@@ -17,20 +18,19 @@ export function Stats() {
       <div className="container mx-auto px-6 md:px-12 relative z-10">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
           {stats.map((stat, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-            >
+            <ScrollReveal key={index} delay={index * 0.1} direction="scale">
               <h4 className="text-5xl md:text-7xl font-heading font-bold text-transparent bg-clip-text bg-gradient-to-b from-white to-gray-500 mb-4">
-                {stat.value}
+                <CountUp
+                  to={stat.value}
+                  prefix={stat.prefix}
+                  suffix={stat.suffix}
+                  duration={2.5}
+                />
               </h4>
               <p className="text-sm md:text-base text-brand-violet uppercase tracking-widest font-bold">
                 {stat.label}
               </p>
-            </motion.div>
+            </ScrollReveal>
           ))}
         </div>
       </div>

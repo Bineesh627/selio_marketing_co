@@ -29,20 +29,20 @@ export function Footer() {
       <div className="container mx-auto px-6 md:px-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
           <div className="col-span-1 md:col-span-2">
-            <Link href="/" className="text-3xl font-heading font-bold tracking-tighter text-white mb-6 inline-block">
-              Selio<span className="text-brand-violet">.</span>
+            <Link href="/" className="inline-block mb-6">
+              <img src="/selio.svg" alt="Selio Marketing Co" className="h-8 w-auto" />
             </Link>
             <p className="text-gray-400 max-w-sm mb-8">
               A premium digital agency crafting cinematic, award-winning experiences for ambitious brands globally.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="p-2.5 bg-white/5 rounded-full hover:bg-brand-violet transition-colors text-white">
+              <a href="https://www.linkedin.com/company/seliomarketing/" className="p-2.5 bg-white/5 rounded-full hover:bg-brand-violet transition-colors text-white">
                 <LinkedinIcon size={18} />
               </a>
-              <a href="#" className="p-2.5 bg-white/5 rounded-full hover:bg-brand-violet transition-colors text-white">
+              <a href="https://www.facebook.com/people/Selio/61582334505773/" className="p-2.5 bg-white/5 rounded-full hover:bg-brand-violet transition-colors text-white">
                 <FacebookIcon size={18} />
               </a>
-              <a href="#" className="p-2.5 bg-white/5 rounded-full hover:bg-brand-violet transition-colors text-white">
+              <a href="https://www.instagram.com/selio.marketing.co" className="p-2.5 bg-white/5 rounded-full hover:bg-brand-violet transition-colors text-white">
                 <InstagramIcon size={18} />
               </a>
             </div>
@@ -62,8 +62,8 @@ export function Footer() {
           <div>
             <h4 className="text-white font-bold mb-6">Contact</h4>
             <ul className="space-y-4 text-gray-400">
-              <li>hello@selio.agency</li>
-              <li>+1 (555) 123-4567</li>
+              <li>selioagencyy@gmail.com</li>
+              <li>+91 73062 60004</li>
               <li>120 Digital Avenue,<br />San Francisco, CA 94103</li>
             </ul>
           </div>

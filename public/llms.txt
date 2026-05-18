@@ -1,0 +1,20 @@
+# Selio Marketing Co - AI Context File
+
+Selio Marketing Co is a premium digital marketing and web development agency. 
+We specialize in building elite web experiences, custom websites, and deploying strategic digital marketing campaigns to scale businesses. 
+
+## Services
+- Custom Web Development (React, Next.js, modern WebGL interactions)
+- Branding and Identity
+- Search Engine Optimization (SEO)
+- Digital Marketing Campaigns
+
+## Target Audience
+We serve global businesses looking to elevate their brand presence and improve conversion rates through award-winning design and highly optimized code.
+
+## Contact Information
+- Website: https://selio-marketing.com
+- Main pages: /about, /services, /work, /blog, /contact
+
+## Developer Information
+This website is built with Next.js, React, Tailwind CSS, Framer Motion, GSAP, and Three.js. It features a fully responsive, dark-themed cinematic design with interactive components and smooth scroll transitions.
