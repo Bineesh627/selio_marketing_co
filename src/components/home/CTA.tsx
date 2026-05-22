@@ -6,11 +6,12 @@ import { ArrowUpRight } from "lucide-react";
 import { Magnet } from "@/components/animations/Magnet";
 import { ScrollReveal } from "@/components/animations/ScrollReveal";
 import { BlurText } from "@/components/animations/BlurText";
+import { NoiseOverlay } from "@/components/ui/NoiseOverlay";
 
 export function CTA() {
   return (
     <section className="py-32 bg-brand-charcoal relative overflow-hidden">
-      <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-10 mix-blend-overlay"></div>
+      <NoiseOverlay />
 
       {/* Abstract circles */}
       <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-brand-violet/20 rounded-full blur-[150px] mix-blend-screen translate-x-1/3 -translate-y-1/3" />
@@ -20,7 +21,7 @@ export function CTA() {
         <div className="max-w-4xl mx-auto text-center">
           <ScrollReveal direction="up">
             <BlurText
-              text="Ready to scale your brand?"
+              text="Ready to Elevate your brand?"
               delay={60}
               className="text-5xl md:text-8xl font-heading font-bold text-white mb-8 tracking-tighter justify-center"
             />
@@ -28,7 +29,7 @@ export function CTA() {
 
           <ScrollReveal direction="up" delay={0.15}>
             <p className="text-xl text-gray-400 mb-12 max-w-2xl mx-auto">
-              Partner with us to deploy high-converting digital marketing campaigns and a world-class web presence that dominates your industry.
+              We help ambitious brands create impactful digital experiences through creative strategy, performance marketing, branding, and modern web solutions.
             </p>
           </ScrollReveal>
 

@@ -1,25 +1,8 @@
 import type { Metadata } from "next";
-import { Inter, Plus_Jakarta_Sans, Syne } from "next/font/google";
 import "./globals.css";
 import { SmoothScrolling } from "@/components/layout/SmoothScrolling";
 import { Navigation } from "@/components/layout/Navigation";
 import { Footer } from "@/components/layout/Footer";
-import { CustomCursor } from "@/components/layout/CustomCursor";
-
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-});
-
-const jakarta = Plus_Jakarta_Sans({
-  variable: "--font-jakarta",
-  subsets: ["latin"],
-});
-
-const syne = Syne({
-  variable: "--font-syne",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "Selio Marketing Co | Premium Digital Agency",
@@ -51,12 +34,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${inter.variable} ${jakarta.variable} ${syne.variable} h-full antialiased dark`}
-    >
+    <html lang="en" className="h-full antialiased dark" suppressHydrationWarning>
       <body className="min-h-full flex flex-col bg-brand-onyx text-foreground selection:bg-brand-violet selection:text-white">
-        <CustomCursor />
         <SmoothScrolling>
           <Navigation />
           <main className="flex-1">{children}</main>

@@ -66,7 +66,7 @@ export default function About() {
       </section>
 
       {/* Team Showcase */}
-      <section className="py-20 bg-brand-charcoal">
+      {/* <section className="py-20 bg-brand-charcoal">
         <div className="container mx-auto px-6 md:px-12 text-center">
           <h2 className="text-4xl md:text-5xl font-heading font-bold text-white mb-16">Leadership Team</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
@@ -82,7 +82,7 @@ export default function About() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       <CTA />
     </main>

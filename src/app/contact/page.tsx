@@ -62,7 +62,7 @@ export default function ContactPage() {
                   </a>
                 </div>
               </div>
-              <div className="flex items-start space-x-4">
+              {/* <div className="flex items-start space-x-4">
                 <div className="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-brand-amber shrink-0">
                   <MapPin size={20} />
                 </div>
@@ -70,7 +70,7 @@ export default function ContactPage() {
                   <h4 className="text-white font-bold mb-1">Visit Us</h4>
                   <p className="text-gray-400">120 Digital Avenue, Suite 400<br/>San Francisco, CA 94103</p>
                 </div>
-              </div>
+              </div> */}
             </div>
             
             {/* Mock Map */}

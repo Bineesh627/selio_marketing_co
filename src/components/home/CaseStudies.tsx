@@ -99,10 +99,10 @@ export function CaseStudies() {
         <div className="cs-header flex flex-col md:flex-row justify-between items-end mb-32">
           <div>
             <h2 className="text-5xl md:text-8xl font-heading font-bold text-white mb-6">
-              Selected <span className="text-brand-cyan">Work.</span>
+              Selected Projects & <span className="text-brand-cyan">Creative Work.</span>
             </h2>
             <p className="text-xl md:text-2xl text-gray-400 max-w-xl font-light">
-              We build digital products that people love to use. Here is a selection of our recent projects.
+              From ambitious startups to growing brands, we create digital experiences that combine creativity, strategy, and performance.
             </p>
           </div>
           <Link href="/work" className="mt-8 md:mt-0 px-10 py-5 rounded-full border border-white/20 text-white font-bold hover:bg-white hover:text-brand-onyx transition-all duration-300 hover:scale-105">

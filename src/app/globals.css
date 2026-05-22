@@ -1,4 +1,11 @@
 @import "tailwindcss";
+@import "@fontsource-variable/inter";
+@import "@fontsource-variable/plus-jakarta-sans";
+@import "@fontsource/syne/400.css";
+@import "@fontsource/syne/500.css";
+@import "@fontsource/syne/600.css";
+@import "@fontsource/syne/700.css";
+@import "@fontsource/syne/800.css";
 
 @theme inline {
   --color-background: var(--background);
@@ -10,8 +17,8 @@
   --color-brand-cyan: #00E5FF;
   --color-brand-amber: #FFC400;
 
-  --font-sans: var(--font-inter), var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
-  --font-heading: var(--font-syne), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Inter Variable", "Plus Jakarta Sans Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-heading: "Syne", ui-sans-serif, system-ui, sans-serif;
 
   --animate-marquee: marquee 20s linear infinite;
 
@@ -24,6 +31,13 @@
     0% { transform: translateY(-100%); }
     50% { transform: translateY(0%); }
     100% { transform: translateY(100%); }
+  }
+
+  --animate-pulse-slow: pulse-slow 8s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+
+  @keyframes pulse-slow {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: .7; transform: scale(1.05); }
   }
 }
 
@@ -59,4 +73,41 @@ html.lenis, html.lenis body {
 
 .lenis.lenis-smooth iframe {
   pointer-events: none;
+}
+
+/* Hero fluid fallback — lightweight CSS animation before WebGL loads */
+@keyframes hero-fluid-drift-a {
+  0%, 100% { transform: translate(-20%, -10%) scale(1); }
+  50% { transform: translate(10%, 15%) scale(1.15); }
+}
+
+@keyframes hero-fluid-drift-b {
+  0%, 100% { transform: translate(15%, 10%) scale(1.1); }
+  50% { transform: translate(-15%, -5%) scale(0.95); }
+}
+
+.hero-fluid-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.55;
+  will-change: transform;
+}
+
+.hero-fluid-orb-a {
+  width: 55%;
+  height: 55%;
+  top: 10%;
+  left: 15%;
+  background: radial-gradient(circle, #5227ff 0%, transparent 70%);
+  animation: hero-fluid-drift-a 14s ease-in-out infinite;
+}
+
+.hero-fluid-orb-b {
+  width: 50%;
+  height: 50%;
+  bottom: 5%;
+  right: 10%;
+  background: radial-gradient(circle, #ff9ffc 0%, transparent 70%);
+  animation: hero-fluid-drift-b 18s ease-in-out infinite;
 }

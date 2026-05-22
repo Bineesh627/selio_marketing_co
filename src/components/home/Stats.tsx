@@ -3,18 +3,19 @@
 import { motion } from "framer-motion";
 import { CountUp } from "@/components/animations/CountUp";
 import { ScrollReveal } from "@/components/animations/ScrollReveal";
+import { NoiseOverlay } from "@/components/ui/NoiseOverlay";
 
 const stats = [
-  { value: 250, suffix: "+", label: "Clients Served" },
-  { value: 400, suffix: "%", label: "Avg. ROI Delivered" },
-  { value: 1200, suffix: "+", label: "Campaigns Managed" },
-  { value: 50, prefix: "$", suffix: "M+", label: "Revenue Generated" },
+  { value: 120, suffix: "+", label: "Brands Collaborated" },
+  { value: 300, suffix: "%", label: "Average Engagement Growth" },
+  { value: 500, suffix: "+", label: "Campaigns Delivered" },
+  { value: 15, suffix: "M+", label: "Reach Generated" },
 ];
 
 export function Stats() {
   return (
     <section className="py-24 bg-brand-charcoal relative overflow-hidden border-y border-white/5">
-      <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-10 mix-blend-overlay"></div>
+      <NoiseOverlay />
       <div className="container mx-auto px-6 md:px-12 relative z-10">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
           {stats.map((stat, index) => (
@@ -22,7 +23,6 @@ export function Stats() {
               <h4 className="text-5xl md:text-7xl font-heading font-bold text-transparent bg-clip-text bg-gradient-to-b from-white to-gray-500 mb-4">
                 <CountUp
                   to={stat.value}
-                  prefix={stat.prefix}
                   suffix={stat.suffix}
                   duration={2.5}
                 />

@@ -15,36 +15,36 @@ if (typeof window !== "undefined") {
 
 const services = [
   {
-    title: "Website Development",
-    description: "High-performance, award-winning custom web experiences built to convert visitors into loyal customers.",
+    title: "Brand Strategy & Identity",
+    description: "Distinctive brand identities, visual systems, and creative direction designed to help businesses build recognition, trust, and long-term market presence.",
     icon: <Code size={32} />,
     color: "group-hover:text-brand-violet",
     spotlightColor: "rgba(139, 92, 246, 0.18)",
   },
   {
-    title: "Digital Marketing Mastery",
-    description: "End-to-end performance marketing that scales ROI, acquires users, and drives explosive revenue growth.",
+    title: "Website Development",
+    description: "Custom website design and development focused on performance, user experience, SEO optimisation, and conversion-driven digital experiences for modern brands.",
     icon: <Share2 size={32} />,
     color: "group-hover:text-brand-cyan",
     spotlightColor: "rgba(0, 229, 255, 0.15)",
   },
   {
-    title: "Advanced SEO & CRO",
-    description: "Dominating search rankings and optimizing conversion rates with deep technical and analytical strategies.",
+    title: "SEO & Growth Optimisation",
+    description: "Data-driven SEO strategies, technical optimisation, and content planning that improve search visibility, increase organic traffic, and strengthen online authority.",
     icon: <Search size={32} />,
     color: "group-hover:text-brand-amber",
     spotlightColor: "rgba(255, 196, 0, 0.15)",
   },
   {
-    title: "Brand Strategy & Design",
-    description: "Crafting memorable digital identities and creative assets that resonate and stand out in the noise.",
+    title: "Performance Marketing",
+    description: "Strategic paid advertising and digital marketing campaigns designed to generate qualified leads, improve engagement, and maximise measurable business growth.",
     icon: <PenTool size={32} />,
     color: "group-hover:text-brand-violet",
     spotlightColor: "rgba(139, 92, 246, 0.18)",
   },
   {
     title: "Video Production",
-    description: "Cinematic visual storytelling and dynamic motion graphics that captivate and convert at scale.",
+    description: "Creative video production, cinematic storytelling, and motion-driven content crafted to capture attention, increase engagement, and elevate brand communication.",
     icon: <Video size={32} />,
     color: "group-hover:text-brand-cyan",
     spotlightColor: "rgba(0, 229, 255, 0.15)",
@@ -76,7 +76,7 @@ export function Services() {
       <div className="container mx-auto px-6 md:px-12">
         <div className="service-header mb-20">
           <h2 className="text-5xl md:text-7xl font-heading font-bold text-white mb-6">
-            Web Development <br /> & <span className="text-brand-violet">Digital Marketing.</span>
+            Strategic Digital Solutions <br />for <span className="text-brand-violet">Business Growth.</span>
           </h2>
           <p className="text-xl md:text-2xl text-gray-400 max-w-2xl font-light">
             We provide an elite suite of digital services designed to scale your business, acquire customers, and boost your revenue.

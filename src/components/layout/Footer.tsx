@@ -33,7 +33,7 @@ export function Footer() {
               <img src="/selio.svg" alt="Selio Marketing Co" className="h-8 w-auto" />
             </Link>
             <p className="text-gray-400 max-w-sm mb-8">
-              A premium digital agency crafting cinematic, award-winning experiences for ambitious brands globally.
+              A creative digital agency helping brands grow through branding, website development, SEO, social media marketing, performance campaigns, and visual storytelling.
             </p>
             <div className="flex space-x-4">
               <a href="https://www.linkedin.com/company/seliomarketing/" className="p-2.5 bg-white/5 rounded-full hover:bg-brand-violet transition-colors text-white">
@@ -53,8 +53,8 @@ export function Footer() {
             <ul className="space-y-4 text-gray-400">
               <li><Link href="/about" className="hover:text-white transition-colors">About Us</Link></li>
               <li><Link href="/services" className="hover:text-white transition-colors">Services</Link></li>
-              <li><Link href="/work" className="hover:text-white transition-colors">Our Work</Link></li>
-              <li><Link href="/blog" className="hover:text-white transition-colors">Insights</Link></li>
+              {/* <li><Link href="/work" className="hover:text-white transition-colors">Our Work</Link></li> */}
+              {/* <li><Link href="/blog" className="hover:text-white transition-colors">Insights</Link></li> */}
               <li><Link href="/contact" className="hover:text-white transition-colors">Contact</Link></li>
             </ul>
           </div>
@@ -64,7 +64,7 @@ export function Footer() {
             <ul className="space-y-4 text-gray-400">
               <li>selioagencyy@gmail.com</li>
               <li>+91 73062 60004</li>
-              <li>120 Digital Avenue,<br />San Francisco, CA 94103</li>
+              {/* <li>120 Digital Avenue,<br />San Francisco, CA 94103</li> */}
             </ul>
           </div>
         </div>
