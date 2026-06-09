@@ -9,10 +9,10 @@ export const metadata: Metadata = {
 };
 
 const articles = [
-  { id: 1, title: "The Future of Web Design: Beyond 2026", category: "Design", date: "Oct 12, 2026", image: "https://images.unsplash.com/photo-1541462608143-67571c6738dd?q=80&w=1000&auto=format&fit=crop" },
-  { id: 2, title: "Mastering AEO: Optimizing for AI Search Engines", category: "Marketing", date: "Oct 05, 2026", image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=1000&auto=format&fit=crop" },
-  { id: 3, title: "Why Cinematic Scrolling is the New Standard", category: "Development", date: "Sep 28, 2026", image: "https://images.unsplash.com/photo-1558655146-d09347e92766?q=80&w=1000&auto=format&fit=crop" },
-  { id: 4, title: "Building Authentic Brands in the AI Era", category: "Branding", date: "Sep 15, 2026", image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=1000&auto=format&fit=crop" },
+  { id: 1, title: "The Future of Web Design: Beyond 2026", category: "Design", date: "Upcoming...", image: "https://images.unsplash.com/photo-1541462608143-67571c6738dd?q=80&w=1000&auto=format&fit=crop" },
+  { id: 2, title: "Mastering AEO: Optimizing for AI Search Engines", category: "Marketing", date: "Upcoming...", image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=1000&auto=format&fit=crop" },
+  { id: 3, title: "Why Cinematic Scrolling is the New Standard", category: "Development", date: "Upcoming...", image: "https://images.unsplash.com/photo-1558655146-d09347e92766?q=80&w=1000&auto=format&fit=crop" },
+  { id: 4, title: "Building Authentic Brands in the AI Era", category: "Branding", date: "Upcoming...", image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=1000&auto=format&fit=crop" },
 ];
 
 export default function BlogPage() {
@@ -22,7 +22,7 @@ export default function BlogPage() {
         <h1 className="text-5xl md:text-8xl font-heading font-bold text-white mb-6">
           Latest <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-amber to-brand-violet">Insights.</span>
         </h1>
-        
+
         {/* Search & Filters UI */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-6 mt-16 mb-20 border-y border-white/10 py-8">
           <div className="flex flex-wrap gap-4 w-full md:w-auto">
@@ -34,9 +34,9 @@ export default function BlogPage() {
           </div>
           <div className="relative w-full md:w-auto">
             <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 w-5 h-5" />
-            <input 
-              type="text" 
-              placeholder="Search articles..." 
+            <input
+              type="text"
+              placeholder="Search articles..."
               className="w-full md:w-80 bg-white/5 border border-white/10 rounded-full py-3 pl-12 pr-6 text-white outline-none focus:border-brand-violet transition-colors"
             />
           </div>
@@ -47,9 +47,9 @@ export default function BlogPage() {
           <Link href="/blog/1" className="block">
             <div className="relative aspect-[21/9] rounded-[2.5rem] overflow-hidden bg-white/5 border border-white/10">
               <div className="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-105"
-                   style={{ backgroundImage: `url(${articles[0].image})` }} />
+                style={{ backgroundImage: `url(${articles[0].image})` }} />
               <div className="absolute inset-0 bg-gradient-to-t from-brand-onyx via-brand-onyx/40 to-transparent" />
-              
+
               <div className="absolute bottom-0 left-0 p-10 md:p-16 w-full md:w-2/3">
                 <div className="flex items-center space-x-4 mb-6">
                   <span className="px-4 py-2 bg-brand-violet text-white text-xs font-bold uppercase tracking-wider rounded-full">{articles[0].category}</span>
@@ -72,15 +72,15 @@ export default function BlogPage() {
               <Link href={`/blog/${article.id}`} className="block">
                 <div className="relative aspect-[4/3] overflow-hidden rounded-3xl mb-6 bg-white/5 border border-white/10">
                   <div className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
-                       style={{ backgroundImage: `url(${article.image})` }} />
+                    style={{ backgroundImage: `url(${article.image})` }} />
                   <div className="absolute inset-0 bg-brand-onyx/20 group-hover:bg-transparent transition-colors duration-500" />
                 </div>
-                
+
                 <div className="flex items-center space-x-4 mb-4">
                   <span className="text-brand-violet text-sm font-bold uppercase tracking-widest">{article.category}</span>
                   <span className="text-gray-500 text-sm">{article.date}</span>
                 </div>
-                
+
                 <h3 className="text-2xl font-heading font-bold text-white group-hover:text-brand-amber transition-colors">
                   {article.title}
                 </h3>
@@ -89,7 +89,7 @@ export default function BlogPage() {
           ))}
         </div>
       </section>
-      
+
       <CTA />
     </main>
   );
