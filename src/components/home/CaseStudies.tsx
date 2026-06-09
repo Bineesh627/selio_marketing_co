@@ -14,19 +14,25 @@ if (typeof window !== "undefined") {
 const works = [
   {
     id: 1,
-    title: "Aura Skincare",
-    category: "E-Commerce / Branding",
-    image: "https://images.unsplash.com/photo-1629198688000-71f23e745b6e?q=80&w=2000&auto=format&fit=crop",
-  },
-  {
-    id: 2,
-    title: "Fintech X",
-    category: "Web App / UI/UX",
+    title: "Rensol",
+    category: "ERP System Development",
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2000&auto=format&fit=crop",
   },
   {
+    id: 2,
+    title: "Corepro Techno LLP",
+    category: "Digital Marketing & SEO",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2000&auto=format&fit=crop",
+  },
+  {
     id: 3,
-    title: "Lumina Architecture",
+    title: "Glamtrinkets",
+    category: "E-Commerce Development",
+    image: "https://images.unsplash.com/photo-1629198688000-71f23e745b6e?q=80&w=2000&auto=format&fit=crop",
+  },
+  {
+    id: 4,
+    title: "Fusintech",
     category: "Corporate Website",
     image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2000&auto=format&fit=crop",
   }
@@ -57,7 +63,6 @@ export function CaseStudies() {
     
     items.forEach((item) => {
       const img = item.querySelector(".cs-img");
-      const text = item.querySelector(".cs-text");
       
       // Reveal entire item
       gsap.fromTo(
@@ -134,7 +139,7 @@ export function CaseStudies() {
                   {work.title}
                 </h3>
                 <Link
-                  href={`/work`}
+                  href={`/work/${work.id}`}
                   className="inline-flex items-center space-x-3 text-white font-bold uppercase tracking-wider group/btn"
                 >
                   <span className="relative overflow-hidden text-lg">

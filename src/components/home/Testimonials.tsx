@@ -1,70 +1,103 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Quote } from "lucide-react";
+import { Quote, User } from "lucide-react";
 import { SpotlightCard } from "@/components/animations/SpotlightCard";
 import { ScrollReveal } from "@/components/animations/ScrollReveal";
 
 const testimonials = [
   {
     quote: "Selio completely transformed our digital presence. Their cinematic approach to our brand storytelling resulted in a 300% increase in user engagement and record-breaking conversions.",
-    name: "Sarah Jenkins",
-    role: "CMO, Lumina Architecture",
-    avatar: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=200&auto=format&fit=crop",
+    name: "Abdul Salam",
+    role: "Founder, Rensol",
   },
   {
     quote: "Working with Selio was a game changer. Their SEO strategy tripled our organic traffic in just four months and the new website converts like crazy.",
-    name: "Marcus Reid",
-    role: "CEO, Fintech X",
-    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop",
+    name: "Anirudhan B S",
+    role: "Founder, corepro Techno LLP",
+  },
+  {
+    quote: "Our social media ROI increased by 250% within the first three months of working with Selio. Their data-driven approach to digital marketing and targeting was spot on.",
+    name: "Durga S",
+    role: "Founder, glamtrinkets",
+  },
+  {
+    quote: "The PPC campaigns managed by Selio delivered an outstanding acquisition cost reduction. They are strategic, creative, and highly analytical in their digital marketing efforts.",
+    name: "Bineesh S",
+    role: "Founder, Fusintech",
   },
 ];
+
+// Duplicate the testimonials to create a seamless looping effect
+const row = [...testimonials, ...testimonials];
 
 export function Testimonials() {
   return (
     <section className="py-32 bg-brand-onyx overflow-hidden">
-      <div className="container mx-auto px-6 md:px-12">
-        <div className="flex flex-col lg:flex-row gap-16 items-start">
-          <ScrollReveal direction="right" className="lg:w-1/3 lg:sticky lg:top-32">
+      <div className="container mx-auto px-6 md:px-12 mb-16">
+        <ScrollReveal direction="up">
+          <div className="max-w-3xl">
             <h2 className="text-4xl md:text-6xl font-heading font-bold text-white mb-6">
-              Client <br /><span className="text-brand-violet">Stories.</span>
+              Client <span className="text-brand-violet">Stories.</span>
             </h2>
-            <p className="text-gray-400 text-lg mb-8">
+            <p className="text-gray-400 text-lg">
               Don&apos;t just take our word for it. Hear from the global brands that have partnered with us to achieve remarkable results.
             </p>
-          </ScrollReveal>
+          </div>
+        </ScrollReveal>
+      </div>
 
-          <div className="lg:w-2/3 flex flex-col gap-8">
-            {testimonials.map((t, index) => (
-              <ScrollReveal key={index} delay={index * 0.15} direction="left">
+      {/* Infinite Horizontal Marquee */}
+      <div className="flex flex-col gap-8 w-full relative">
+        {/* Left and Right Fade Gradients */}
+        <div className="absolute left-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-r from-brand-onyx to-transparent z-10 pointer-events-none" />
+        <div className="absolute right-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-l from-brand-onyx to-transparent z-10 pointer-events-none" />
+
+        {/* Single Row: Left to Right scrolling */}
+        <div className="flex overflow-hidden w-full">
+          <motion.div
+            className="flex gap-8 shrink-0 py-4"
+            animate={{
+              x: ["-50%", 0],
+            }}
+            transition={{
+              ease: "linear",
+              duration: 35,
+              repeat: Infinity,
+            }}
+          >
+            {row.map((t, index) => (
+              <div key={`testimonial-${index}`} className="w-[320px] md:w-[420px] shrink-0">
                 <SpotlightCard
-                  spotlightColor="rgba(139, 92, 246, 0.18)"
-                  className="group p-10 md:p-16 rounded-[2rem] relative"
+                  spotlightColor="rgba(139, 92, 246, 0.15)"
+                  className="group p-8 md:p-10 rounded-[2rem] relative h-full flex flex-col justify-between border border-white/5"
                 >
-                  <Quote className="absolute top-10 right-10 text-brand-violet/20" size={80} />
-                  <div className="flex text-brand-amber mb-6">
-                    {[1, 2, 3, 4, 5].map((star) => (
-                      <svg key={star} className="w-6 h-6 fill-current" viewBox="0 0 24 24">
-                        <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                      </svg>
-                    ))}
+                  <div>
+                    <Quote className="absolute top-6 right-6 text-brand-violet/20" size={50} />
+                    <div className="flex text-brand-amber mb-4">
+                      {[1, 2, 3, 4, 5].map((star) => (
+                        <svg key={star} className="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                          <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                        </svg>
+                      ))}
+                    </div>
+                    <p className="text-lg md:text-xl text-white font-medium leading-relaxed mb-6">
+                      &quot;{t.quote}&quot;
+                    </p>
                   </div>
-                  <p className="text-2xl md:text-3xl text-white font-medium leading-relaxed mb-10 relative z-10">
-                    &quot;{t.quote}&quot;
-                  </p>
                   <div className="flex items-center space-x-4">
-                    <div className="w-16 h-16 rounded-full bg-gray-700 overflow-hidden">
-                      <img src={t.avatar} alt={t.name} className="w-full h-full object-cover" />
+                    <div className="w-12 h-12 rounded-full bg-brand-violet/10 border border-brand-violet/20 flex items-center justify-center text-brand-violet shrink-0">
+                      <User size={20} />
                     </div>
                     <div>
-                      <h5 className="text-white font-bold text-lg">{t.name}</h5>
-                      <p className="text-gray-400">{t.role}</p>
+                      <h5 className="text-white font-bold text-base">{t.name}</h5>
+                      <p className="text-gray-400 text-sm">{t.role}</p>
                     </div>
                   </div>
                 </SpotlightCard>
-              </ScrollReveal>
+              </div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

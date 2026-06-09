@@ -9,12 +9,10 @@ import { ArrowUpRight } from "lucide-react";
 const categories = ["All", "Branding", "UI/UX", "Web Development", "Video"];
 
 const works = [
-  { id: 1, title: "Aura Skincare", category: "Branding", image: "https://images.unsplash.com/photo-1629198688000-71f23e745b6e?q=80&w=1000&auto=format&fit=crop" },
-  { id: 2, title: "Fintech X", category: "UI/UX", image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1000&auto=format&fit=crop" },
-  { id: 3, title: "Lumina Architecture", category: "Web Development", image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1000&auto=format&fit=crop" },
-  { id: 4, title: "Nebula Coffee", category: "Branding", image: "https://images.unsplash.com/photo-1559525839-b184a4d698c7?q=80&w=1000&auto=format&fit=crop" },
-  { id: 5, title: "Velocity Motors", category: "Video", image: "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=1000&auto=format&fit=crop" },
-  { id: 6, title: "Elevate Fitness", category: "UI/UX", image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1000&auto=format&fit=crop" },
+  { id: 1, title: "Rensol", category: "Web Development", image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1000&auto=format&fit=crop" },
+  { id: 2, title: "Corepro Techno LLP", category: "UI/UX", image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1000&auto=format&fit=crop" },
+  { id: 3, title: "Glamtrinkets", category: "Branding", image: "https://images.unsplash.com/photo-1629198688000-71f23e745b6e?q=80&w=1000&auto=format&fit=crop" },
+  { id: 4, title: "Fusintech", category: "Web Development", image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1000&auto=format&fit=crop" },
 ];
 
 export default function WorkPage() {
