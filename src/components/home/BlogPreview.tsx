@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
+import { BlurText } from "@/components/animations/BlurText";
 
 const articles = [
   {
@@ -45,13 +46,30 @@ export function BlogPreview() {
         {/* Header */}
         <div className="flex flex-col md:flex-row justify-between items-end mb-16">
           <div>
-            <h2 className="text-4xl md:text-6xl font-heading font-bold text-white mb-5">
-              Industry Trends &{" "}
-              <span className="text-brand-violet">Strategies.</span>
+            <h2 className="text-4xl md:text-6xl font-heading font-bold text-white mb-5 flex flex-wrap leading-tight">
+              <BlurText 
+                text="Industry Trends &" 
+                animateBy="letters" 
+                delay={20} 
+                className="inline-flex mr-3"
+              />
+              <span className="text-brand-violet">
+                <BlurText 
+                  text="Strategies." 
+                  animateBy="letters" 
+                  delay={20} 
+                  className="inline-flex"
+                />
+              </span>
             </h2>
-            <p className="text-xl text-gray-400 max-w-xl">
-              Thoughts, trends, and strategies from our team of industry experts.
-            </p>
+            <div className="mt-4">
+              <BlurText
+                text="Thoughts, trends, and strategies from our team of industry experts."
+                animateBy="words"
+                delay={35}
+                className="text-xl text-gray-400 max-w-xl leading-relaxed"
+              />
+            </div>
           </div>
           <Link
             href="/blog"

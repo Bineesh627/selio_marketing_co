@@ -44,7 +44,8 @@ export function Hero() {
         <h1 className="text-5xl md:text-7xl lg:text-8xl xl:text-[6rem] font-heading font-bold tracking-tighter text-white max-w-5xl leading-[1.05] mb-8 z-10">
           <BlurText
             text="Crafting Bold Brands, Digital Experiences & Creative Growth"
-            delay={70}
+            delay={20}
+            animateBy="letters"
             className="justify-center"
             startOnMount
           />

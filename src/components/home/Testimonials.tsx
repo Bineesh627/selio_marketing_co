@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Quote, User } from "lucide-react";
 import { SpotlightCard } from "@/components/animations/SpotlightCard";
 import { ScrollReveal } from "@/components/animations/ScrollReveal";
+import { BlurText } from "@/components/animations/BlurText";
 
 const testimonials = [
   {
@@ -35,16 +36,32 @@ export function Testimonials() {
   return (
     <section className="py-32 bg-brand-onyx overflow-hidden">
       <div className="container mx-auto px-6 md:px-12 mb-16">
-        <ScrollReveal direction="up">
-          <div className="max-w-3xl">
-            <h2 className="text-4xl md:text-6xl font-heading font-bold text-white mb-6">
-              Client <span className="text-brand-violet">Stories.</span>
-            </h2>
-            <p className="text-gray-400 text-lg">
-              Don&apos;t just take our word for it. Hear from the global brands that have partnered with us to achieve remarkable results.
-            </p>
+        <div className="max-w-3xl">
+          <h2 className="text-4xl md:text-6xl font-heading font-bold text-white mb-6 flex flex-wrap leading-tight">
+            <BlurText 
+              text="Client" 
+              animateBy="letters" 
+              delay={20} 
+              className="inline-flex mr-3"
+            />
+            <span className="text-brand-violet">
+              <BlurText 
+                text="Stories." 
+                animateBy="letters" 
+                delay={20} 
+                className="inline-flex"
+              />
+            </span>
+          </h2>
+          <div className="mt-4">
+            <BlurText
+              text="Don't just take our word for it. Hear from the global brands that have partnered with us to achieve remarkable results."
+              animateBy="words"
+              delay={35}
+              className="text-gray-400 text-lg leading-relaxed"
+            />
           </div>
-        </ScrollReveal>
+        </div>
       </div>
 
       {/* Infinite Horizontal Marquee */}

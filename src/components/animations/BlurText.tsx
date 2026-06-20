@@ -9,24 +9,29 @@ interface BlurTextProps {
   className?: string;
   /** When true, animates immediately (for above-the-fold hero). */
   startOnMount?: boolean;
+  animateBy?: "words" | "letters";
 }
 
 export const BlurText = ({
   text,
-  delay = 50,
+  delay = 30,
   className = "",
   startOnMount = false,
+  animateBy = "words",
 }: BlurTextProps) => {
   const words = text.split(" ");
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "0px" });
+  const isInView = useInView(ref, { once: true, margin: "-10% 0px" });
   const shouldAnimate = startOnMount || isInView;
 
   const container = {
     hidden: { opacity: 0 },
     visible: (i = 1) => ({
       opacity: 1,
-      transition: { staggerChildren: delay / 1000, delayChildren: 0.08 * i },
+      transition: { 
+        staggerChildren: animateBy === "letters" ? (delay || 15) / 1000 : (delay || 50) / 1000, 
+        delayChildren: 0.05 * i 
+      },
     }),
   };
 
@@ -43,8 +48,8 @@ export const BlurText = ({
     },
     hidden: {
       opacity: 0,
-      filter: "blur(10px)",
-      y: 16,
+      filter: "blur(8px)",
+      y: 12,
       transition: {
         type: "spring" as const,
         damping: 14,
@@ -62,11 +67,28 @@ export const BlurText = ({
       initial="hidden"
       animate={shouldAnimate ? "visible" : "hidden"}
     >
-      {words.map((word, index) => (
-        <motion.span variants={child} style={{ marginRight: "0.25em" }} key={index}>
-          {word}
-        </motion.span>
-      ))}
+      {animateBy === "words" ? (
+        words.map((word, index) => (
+          <motion.span variants={child} style={{ marginRight: "0.25em" }} key={index}>
+            {word}
+          </motion.span>
+        ))
+      ) : (
+        words.map((word, wordIdx) => (
+          <span key={wordIdx} className="inline-block whitespace-nowrap mr-[0.25em] overflow-hidden py-1">
+            {word.split("").map((char, charIdx) => (
+              <motion.span
+                key={charIdx}
+                variants={child}
+                className="inline-block"
+              >
+                {char}
+              </motion.span>
+            ))}
+          </span>
+        ))
+      )}
     </motion.div>
   );
 };
+

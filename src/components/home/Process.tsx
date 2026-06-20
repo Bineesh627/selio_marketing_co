@@ -2,6 +2,7 @@
 
 import { TiltedCard } from "@/components/animations/TiltedCard";
 import { ScrollReveal } from "@/components/animations/ScrollReveal";
+import { BlurText } from "@/components/animations/BlurText";
 
 const steps = [
   { num: "01", title: "Discovery", desc: "We research your brand, audience, competitors, and goals to uncover opportunities that drive meaningful digital growth." },
@@ -16,14 +17,32 @@ export function Process() {
     <section className="py-32 bg-brand-charcoal relative">
       <div className="container mx-auto px-6 md:px-12">
         <div className="text-center mb-24">
-          <ScrollReveal direction="up">
-            <h2 className="text-4xl md:text-6xl font-heading font-bold text-white mb-6">
-              How We Build Digital <span className="text-brand-amber">Growth.</span>
+          <div className="flex flex-col items-center">
+            <h2 className="text-4xl md:text-6xl font-heading font-bold text-white mb-6 flex flex-wrap justify-center leading-tight">
+              <BlurText 
+                text="How We Build Digital" 
+                animateBy="letters" 
+                delay={20} 
+                className="inline-flex mr-3"
+              />
+              <span className="text-brand-amber">
+                <BlurText 
+                  text="Growth." 
+                  animateBy="letters" 
+                  delay={20} 
+                  className="inline-flex"
+                />
+              </span>
             </h2>
-            <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-              Our streamlined creative and marketing process helps brands build stronger identities, improve digital visibility, and achieve measurable business growth.
-            </p>
-          </ScrollReveal>
+            <div className="mt-4">
+              <BlurText
+                text="Our streamlined creative and marketing process helps brands build stronger identities, improve digital visibility, and achieve measurable business growth."
+                animateBy="words"
+                delay={35}
+                className="text-xl text-gray-400 max-w-2xl mx-auto text-center font-light leading-relaxed"
+              />
+            </div>
+          </div>
         </div>
 
         <div className="relative max-w-4xl mx-auto">

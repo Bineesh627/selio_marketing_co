@@ -22,7 +22,8 @@ export function CTA() {
           <ScrollReveal direction="up">
             <BlurText
               text="Ready to Elevate your brand?"
-              delay={60}
+              delay={20}
+              animateBy="letters"
               className="text-5xl md:text-8xl font-heading font-bold text-white mb-8 tracking-tighter justify-center"
             />
           </ScrollReveal>

@@ -56,7 +56,7 @@ body {
 /* Base custom styles for GSAP and smoothness */
 html.lenis, html.lenis body {
   height: auto;
-  width: 100vw;
+  width: 100%;
 }
 
 .lenis.lenis-smooth {

@@ -3,15 +3,9 @@
 import { useRef } from "react";
 import { ArrowUpRight, PenTool, Share2, Search, Video, Code } from "lucide-react";
 import Link from "next/link";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SpotlightCard } from "@/components/animations/SpotlightCard";
 import { ScrollReveal } from "@/components/animations/ScrollReveal";
-
-if (typeof window !== "undefined") {
-  gsap.registerPlugin(ScrollTrigger);
-}
+import { BlurText } from "@/components/animations/BlurText";
 
 const services = [
   {
@@ -52,35 +46,40 @@ const services = [
 ];
 
 export function Services() {
-  const container = useRef<HTMLDivElement>(null);
-
-  useGSAP(() => {
-    gsap.fromTo(
-      ".service-header",
-      { opacity: 0, y: 100 },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 1,
-        ease: "power4.out",
-        scrollTrigger: {
-          trigger: ".service-header",
-          start: "top 80%",
-        },
-      }
-    );
-  }, { scope: container });
-
   return (
-    <section ref={container} className="py-32 bg-brand-onyx relative overflow-hidden">
+    <section className="py-32 bg-brand-onyx relative overflow-hidden">
       <div className="container mx-auto px-6 md:px-12">
-        <div className="service-header mb-20">
-          <h2 className="text-5xl md:text-7xl font-heading font-bold text-white mb-6">
-            Strategic Digital Solutions <br />for <span className="text-brand-violet">Business Growth.</span>
+        <div className="mb-20">
+          <h2 className="text-5xl md:text-7xl font-heading font-bold text-white mb-6 leading-tight flex flex-wrap">
+            <BlurText 
+              text="Strategic Digital Solutions" 
+              animateBy="letters" 
+              delay={20} 
+              className="inline-flex mr-4"
+            />
+            <BlurText 
+              text="for" 
+              animateBy="letters" 
+              delay={20} 
+              className="inline-flex mr-4"
+            />
+            <span className="text-brand-violet">
+              <BlurText 
+                text="Business Growth." 
+                animateBy="letters" 
+                delay={20} 
+                className="inline-flex"
+              />
+            </span>
           </h2>
-          <p className="text-xl md:text-2xl text-gray-400 max-w-2xl font-light">
-            We provide an elite suite of digital services designed to scale your business, acquire customers, and boost your revenue.
-          </p>
+          <div className="mt-6">
+            <BlurText
+              text="We provide an elite suite of digital services designed to scale your business, acquire customers, and boost your revenue."
+              animateBy="words"
+              delay={35}
+              className="text-xl md:text-2xl text-gray-400 max-w-2xl font-light leading-relaxed"
+            />
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

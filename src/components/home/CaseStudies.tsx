@@ -6,6 +6,7 @@ import { ArrowUpRight } from "lucide-react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { BlurText } from "@/components/animations/BlurText";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
@@ -42,22 +43,6 @@ export function CaseStudies() {
   const container = useRef<HTMLDivElement>(null);
 
   useGSAP(() => {
-    // Header reveal
-    gsap.fromTo(
-      ".cs-header",
-      { opacity: 0, y: 100 },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 1,
-        ease: "power4.out",
-        scrollTrigger: {
-          trigger: ".cs-header",
-          start: "top 80%",
-        },
-      }
-    );
-
     // Parallax and reveal for each case study
     const items = gsap.utils.toArray<HTMLElement>(".cs-item");
     
@@ -101,14 +86,32 @@ export function CaseStudies() {
   return (
     <section ref={container} className="py-32 bg-brand-onyx overflow-hidden">
       <div className="container mx-auto px-6 md:px-12">
-        <div className="cs-header flex flex-col md:flex-row justify-between items-end mb-32">
+        <div className="flex flex-col md:flex-row justify-between items-end mb-32">
           <div>
-            <h2 className="text-5xl md:text-8xl font-heading font-bold text-white mb-6">
-              Selected Projects & <span className="text-brand-cyan">Creative Work.</span>
+            <h2 className="text-5xl md:text-8xl font-heading font-bold text-white mb-6 flex flex-wrap leading-tight">
+              <BlurText 
+                text="Selected Projects &" 
+                animateBy="letters" 
+                delay={20} 
+                className="inline-flex mr-4"
+              />
+              <span className="text-brand-cyan">
+                <BlurText 
+                  text="Creative Work." 
+                  animateBy="letters" 
+                  delay={20} 
+                  className="inline-flex"
+                />
+              </span>
             </h2>
-            <p className="text-xl md:text-2xl text-gray-400 max-w-xl font-light">
-              From ambitious startups to growing brands, we create digital experiences that combine creativity, strategy, and performance.
-            </p>
+            <div className="mt-6">
+              <BlurText
+                text="From ambitious startups to growing brands, we create digital experiences that combine creativity, strategy, and performance."
+                animateBy="words"
+                delay={35}
+                className="text-xl md:text-2xl text-gray-400 max-w-xl font-light leading-relaxed"
+              />
+            </div>
           </div>
           <Link href="/work" className="mt-8 md:mt-0 px-10 py-5 rounded-full border border-white/20 text-white font-bold hover:bg-white hover:text-brand-onyx transition-all duration-300 hover:scale-105">
             View All Projects
