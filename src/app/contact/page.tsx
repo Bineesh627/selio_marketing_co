@@ -40,7 +40,7 @@ I would like to schedule a strategic consultation.
 *Preferred Slot:* ${formData.day} at ${formData.time}`;
 
     const encodedMessage = encodeURIComponent(predefinedMessage);
-    const whatsappUrl = `https://wa.me/917306260004?text=${encodedMessage}`;
+    const whatsappUrl = `https://wa.me/971558680335?text=${encodedMessage}`;
 
     // Open WhatsApp lead in a new window/tab
     window.open(whatsappUrl, "_blank");
@@ -55,7 +55,7 @@ I would like to schedule a strategic consultation.
 I would like to schedule a strategic consultation.`;
 
     const encodedMessage = encodeURIComponent(predefinedMessage);
-    const whatsappUrl = `https://wa.me/917306260004?text=${encodedMessage}`;
+    const whatsappUrl = `https://wa.me/971558680335?text=${encodedMessage}`;
 
     // Open WhatsApp lead in a new window/tab
     window.open(whatsappUrl, "_blank");
@@ -101,7 +101,7 @@ I would like to schedule a strategic consultation.`;
                 <div>
                   <h4 className="text-white font-bold mb-1">Call Us</h4>
                   <a
-                    href="tel:+917306260004"
+                    href="tel:+971558680335"
                     className="text-gray-400 hover:text-brand-cyan transition-colors font-medium"
                   >
                     +91 73062 60004
@@ -223,10 +223,10 @@ I would like to schedule a strategic consultation.`;
                     <a
                       href={
                         isDirectChat
-                          ? `https://wa.me/917306260004?text=${encodeURIComponent(
+                          ? `https://wa.me/971558680335?text=${encodeURIComponent(
                               `Hello Selio Marketing Co,\n\nI would like to schedule a strategic consultation.`
                             )}`
-                          : `https://wa.me/917306260004?text=${encodeURIComponent(
+                          : `https://wa.me/971558680335?text=${encodeURIComponent(
                               `Hello Selio Marketing Co,\n\nI would like to schedule a strategic consultation.\n\n*Preferred Slot:* ${formData.day} at ${formData.time}`
                             )}`
                       }
