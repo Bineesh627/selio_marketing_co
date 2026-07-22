@@ -36,12 +36,12 @@ export default function WorkPage() {
         </div>
         
         {/* Category Filters */}
-        <div className="flex flex-wrap gap-4 mt-12 mb-12">
+        <div className="flex flex-wrap gap-2.5 sm:gap-4 mt-8 sm:mt-12 mb-8 sm:mb-12">
           {categories.map((cat) => (
             <button
               key={cat}
               onClick={() => setActiveCat(cat)}
-              className={`px-6 py-2.5 rounded-full text-sm font-semibold transition-all ${
+              className={`px-4 sm:px-6 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all ${
                 activeCat === cat
                   ? "bg-white text-brand-onyx shadow-lg scale-105"
                   : "border border-white/20 text-white hover:border-white/50"
@@ -53,7 +53,7 @@ export default function WorkPage() {
         </div>
 
         {/* Works Grid */}
-        <motion.div layout className="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <motion.div layout className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10">
           <AnimatePresence mode="popLayout">
             {filteredWorks.map((work) => (
               <motion.div
@@ -65,23 +65,23 @@ export default function WorkPage() {
                 transition={{ duration: 0.4 }}
                 className="group flex flex-col"
               >
-                <div className="relative overflow-hidden rounded-3xl bg-white/5 aspect-[16/10] border border-white/10 mb-6">
+                <div className="relative overflow-hidden rounded-3xl bg-white/5 min-h-[380px] sm:min-h-0 sm:aspect-[16/10] border border-white/10 mb-6 flex flex-col justify-between p-6 sm:p-8">
                   <div
                     className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
                     style={{ backgroundImage: `url(${work.image})` }}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-brand-onyx via-brand-onyx/30 to-transparent opacity-80 group-hover:opacity-60 transition-opacity duration-500" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-brand-onyx via-brand-onyx/60 to-brand-onyx/20 opacity-90 group-hover:opacity-75 transition-opacity duration-500" />
                   
                   {/* Badge & Live Link */}
-                  <div className="absolute top-6 left-6 right-6 flex justify-between items-center z-10">
-                    <span className="px-4 py-1.5 rounded-full bg-brand-onyx/80 backdrop-blur-md border border-white/15 text-brand-cyan font-bold text-xs uppercase tracking-wider">
+                  <div className="relative flex justify-between items-center z-10 mb-6 gap-2">
+                    <span className="px-3.5 py-1.5 rounded-full bg-brand-onyx/90 backdrop-blur-md border border-white/15 text-brand-cyan font-bold text-xs uppercase tracking-wider shrink-0">
                       {work.category}
                     </span>
                     <a
                       href={work.liveUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center space-x-1.5 px-4 py-1.5 rounded-full bg-white/90 text-brand-onyx font-bold text-xs hover:bg-brand-cyan hover:text-white transition-colors duration-300 shadow-lg"
+                      className="flex items-center space-x-1.5 px-3.5 py-1.5 rounded-full bg-white/90 text-brand-onyx font-bold text-xs hover:bg-brand-cyan hover:text-white transition-colors duration-300 shadow-lg shrink-0"
                     >
                       <span>Live Site</span>
                       <ExternalLink size={14} />
@@ -89,20 +89,20 @@ export default function WorkPage() {
                   </div>
 
                   {/* Overlay Info */}
-                  <div className="absolute inset-0 p-8 flex flex-col justify-end z-10">
-                    <h3 className="text-3xl md:text-4xl font-heading font-bold text-white mb-2">
+                  <div className="relative z-10 flex flex-col justify-end pt-4">
+                    <h3 className="text-2xl sm:text-3xl md:text-4xl font-heading font-bold text-white mb-2 leading-tight">
                       {work.title}
                     </h3>
-                    <p className="text-gray-300 text-sm md:text-base font-light mb-6">
+                    <p className="text-gray-300 text-xs sm:text-sm md:text-base font-light mb-5">
                       {work.subtitle}
                     </p>
                     <div className="flex items-center gap-4">
                       <Link
                         href={`/work/${work.id}`}
-                        className="inline-flex items-center space-x-2 text-white font-bold text-sm uppercase tracking-wider bg-brand-violet hover:bg-brand-violet/80 px-6 py-3 rounded-full transition-all duration-300"
+                        className="inline-flex items-center space-x-2 text-white font-bold text-xs sm:text-sm uppercase tracking-wider bg-brand-violet hover:bg-brand-violet/80 px-5 sm:px-6 py-2.5 sm:py-3 rounded-full transition-all duration-300 shadow-md"
                       >
                         <span>View Full Case Study</span>
-                        <ArrowUpRight size={18} />
+                        <ArrowUpRight size={16} />
                       </Link>
                     </div>
                   </div>

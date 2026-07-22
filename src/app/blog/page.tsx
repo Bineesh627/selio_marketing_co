@@ -17,17 +17,17 @@ const articles = [
 
 export default function BlogPage() {
   return (
-    <main className="pt-32">
-      <section className="container mx-auto px-6 md:px-12 py-20">
-        <h1 className="text-5xl md:text-8xl font-heading font-bold text-white mb-6">
+    <main className="pt-28 sm:pt-32">
+      <section className="container mx-auto px-6 md:px-12 py-12 sm:py-20">
+        <h1 className="text-4xl sm:text-6xl md:text-8xl font-heading font-bold text-white mb-6">
           Latest <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-amber to-brand-violet">Insights.</span>
         </h1>
 
         {/* Search & Filters UI */}
-        <div className="flex flex-col md:flex-row justify-between items-center gap-6 mt-16 mb-20 border-y border-white/10 py-8">
-          <div className="flex flex-wrap gap-4 w-full md:w-auto">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-6 mt-8 sm:mt-16 mb-12 sm:mb-20 border-y border-white/10 py-6 sm:py-8">
+          <div className="flex flex-wrap gap-2.5 sm:gap-4 w-full md:w-auto">
             {["All", "Design", "Marketing", "Development", "Branding"].map((cat) => (
-              <button key={cat} className={`px-5 py-2 rounded-full text-sm font-medium transition-all ${cat === "All" ? "bg-white text-brand-onyx" : "border border-white/20 text-white hover:border-white/50"}`}>
+              <button key={cat} className={`px-4 sm:px-5 py-2 rounded-full text-xs sm:text-sm font-medium transition-all ${cat === "All" ? "bg-white text-brand-onyx" : "border border-white/20 text-white hover:border-white/50"}`}>
                 {cat}
               </button>
             ))}
@@ -37,28 +37,28 @@ export default function BlogPage() {
             <input
               type="text"
               placeholder="Search articles..."
-              className="w-full md:w-80 bg-white/5 border border-white/10 rounded-full py-3 pl-12 pr-6 text-white outline-none focus:border-brand-violet transition-colors"
+              className="w-full md:w-80 bg-white/5 border border-white/10 rounded-full py-2.5 sm:py-3 pl-12 pr-6 text-sm text-white outline-none focus:border-brand-violet transition-colors"
             />
           </div>
         </div>
 
         {/* Featured Article */}
-        <div className="mb-24 group relative">
+        <div className="mb-16 sm:mb-24 group relative">
           <Link href="/blog/1" className="block">
-            <div className="relative aspect-[21/9] rounded-[2.5rem] overflow-hidden bg-white/5 border border-white/10">
+            <div className="relative min-h-[360px] sm:min-h-0 sm:aspect-[21/9] rounded-2xl sm:rounded-[2.5rem] overflow-hidden bg-white/5 border border-white/10 flex flex-col justify-end">
               <div className="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-105"
                 style={{ backgroundImage: `url(${articles[0].image})` }} />
-              <div className="absolute inset-0 bg-gradient-to-t from-brand-onyx via-brand-onyx/40 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-brand-onyx via-brand-onyx/60 to-transparent" />
 
-              <div className="absolute bottom-0 left-0 p-10 md:p-16 w-full md:w-2/3">
-                <div className="flex items-center space-x-4 mb-6">
-                  <span className="px-4 py-2 bg-brand-violet text-white text-xs font-bold uppercase tracking-wider rounded-full">{articles[0].category}</span>
-                  <span className="text-gray-300 font-medium">{articles[0].date}</span>
+              <div className="relative z-10 p-6 sm:p-10 md:p-16 w-full md:w-2/3">
+                <div className="flex items-center space-x-3 sm:space-x-4 mb-4 sm:mb-6">
+                  <span className="px-3.5 py-1.5 bg-brand-violet text-white text-xs font-bold uppercase tracking-wider rounded-full">{articles[0].category}</span>
+                  <span className="text-gray-300 text-xs sm:text-sm font-medium">{articles[0].date}</span>
                 </div>
-                <h2 className="text-4xl md:text-6xl font-heading font-bold text-white mb-6 group-hover:text-brand-cyan transition-colors">{articles[0].title}</h2>
-                <div className="inline-flex items-center space-x-2 text-white font-bold uppercase tracking-wider">
+                <h2 className="text-2xl sm:text-4xl md:text-6xl font-heading font-bold text-white mb-4 sm:mb-6 group-hover:text-brand-cyan transition-colors leading-tight">{articles[0].title}</h2>
+                <div className="inline-flex items-center space-x-2 text-white font-bold text-xs sm:text-sm uppercase tracking-wider">
                   <span>Read Article</span>
-                  <ArrowUpRight size={20} />
+                  <ArrowUpRight size={18} />
                 </div>
               </div>
             </div>

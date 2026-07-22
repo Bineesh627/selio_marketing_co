@@ -31,13 +31,13 @@ export function Navigation() {
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 z-50 flex justify-center mt-6 px-4 md:px-0">
+      <header className="fixed top-0 left-0 right-0 z-50 flex justify-center mt-3 sm:mt-6 px-3 sm:px-4 md:px-0">
         <motion.div
           initial={{ y: -100, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           className={clsx(
-            "flex items-center justify-between w-full md:w-[85%] max-w-6xl rounded-full px-6 py-3 transition-all duration-500",
+            "flex items-center justify-between w-full md:w-[85%] max-w-6xl rounded-full px-4 sm:px-6 py-2.5 sm:py-3 transition-all duration-500",
             isScrolled
               ? "bg-white/5 backdrop-blur-2xl border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.4)]"
               : "bg-transparent border border-transparent shadow-none"

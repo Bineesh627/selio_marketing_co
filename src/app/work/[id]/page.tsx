@@ -15,19 +15,19 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ id: 
   const { caseStudy } = work;
 
   return (
-    <main className="pt-24 bg-brand-onyx min-h-screen">
+    <main className="pt-28 sm:pt-32 bg-brand-onyx min-h-screen">
       {/* Back button */}
-      <div className="container mx-auto px-6 md:px-12 py-8">
-        <Link href="/work" className="inline-flex items-center space-x-2 text-gray-400 hover:text-white transition-colors">
-          <ArrowLeft size={20} />
+      <div className="container mx-auto px-6 md:px-12 py-4 sm:py-8">
+        <Link href="/work" className="inline-flex items-center space-x-2 text-gray-400 hover:text-white transition-colors text-sm sm:text-base">
+          <ArrowLeft size={18} />
           <span>Back to all work</span>
         </Link>
       </div>
 
       {/* Hero Banner */}
       <section className="container mx-auto px-6 md:px-12 pb-16">
-        <div className="flex flex-wrap items-center justify-between gap-4 mb-6">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-violet/15 border border-brand-violet/30 text-brand-violet font-bold uppercase tracking-widest text-xs">
+        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-4 mb-6">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-violet/15 border border-brand-violet/30 text-brand-violet font-bold uppercase tracking-widest text-xs">
             <Sparkles size={14} />
             <span>{work.categoryTag}</span>
           </div>
@@ -36,21 +36,21 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ id: 
             href={work.liveUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center space-x-2 bg-gradient-to-r from-brand-violet to-brand-cyan text-white font-bold px-6 py-2.5 rounded-full hover:opacity-90 transition-all text-sm shadow-lg"
+            className="inline-flex items-center space-x-2 bg-gradient-to-r from-brand-violet to-brand-cyan text-white font-bold px-5 sm:px-6 py-2.5 rounded-full hover:opacity-90 transition-all text-xs sm:text-sm shadow-lg"
           >
             <span>Visit Live Website</span>
-            <ExternalLink size={16} />
+            <ExternalLink size={14} />
           </a>
         </div>
 
-        <h1 className="text-5xl md:text-8xl font-heading font-bold text-white mb-6 leading-tight">
+        <h1 className="text-3xl sm:text-5xl md:text-8xl font-heading font-bold text-white mb-4 sm:mb-6 leading-tight">
           {work.title}
         </h1>
-        <p className="text-xl md:text-2xl text-gray-300 font-light max-w-3xl mb-12">
+        <p className="text-base sm:text-xl md:text-2xl text-gray-300 font-light max-w-3xl mb-8 sm:mb-12">
           {work.subtitle}
         </p>
 
-        <div className="w-full aspect-[21/9] rounded-[2.5rem] overflow-hidden mb-16 bg-white/5 border border-white/10 relative">
+        <div className="w-full aspect-[16/10] sm:aspect-[21/9] rounded-2xl sm:rounded-[2.5rem] overflow-hidden mb-10 sm:mb-16 bg-white/5 border border-white/10 relative">
           <div
             className="w-full h-full bg-cover bg-center"
             style={{ backgroundImage: `url(${work.image})` }}
@@ -59,7 +59,7 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ id: 
         </div>
 
         {/* Project Metadata */}
-        <div className="grid md:grid-cols-4 gap-8 py-10 border-y border-white/10 mb-20">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 py-8 md:py-10 border-y border-white/10 mb-12 sm:mb-20">
           <div>
             <h4 className="text-gray-500 font-bold text-xs uppercase tracking-wider mb-2">Client</h4>
             <p className="text-white text-lg font-semibold">{work.client}</p>
