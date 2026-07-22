@@ -2,7 +2,7 @@
 
 A modern, high-performance marketing website built with cutting-edge web technologies. Features smooth animations, 3D graphics, and an interactive user experience.
 
-**Live Demo:** https://selio-marketing.vercel.app
+**Live Demo:** https://www.seliomarketing.com/
 
 ---
 

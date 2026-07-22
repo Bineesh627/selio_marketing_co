@@ -15,11 +15,11 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/selio.svg", type: "image/svg+xml" },
       { url: "/favicon.ico", sizes: "any" },
+      { url: "/selio.svg", type: "image/svg+xml" },
     ],
-    apple: "/selio.svg",
-    shortcut: "/selio.svg",
+    apple: "/apple-icon.png",
+    shortcut: "/favicon.ico",
   },
   openGraph: {
     title: "Selio Marketing Co | Premium Digital Agency",
