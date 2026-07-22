@@ -8,6 +8,16 @@ import { BlurText } from "@/components/animations/BlurText";
 
 const testimonials = [
   {
+    quote: "GreenNest Realty transformed how luxury buyers discover net-zero homes. Selio delivered an extraordinary platform that elevated our brand and drove record high-intent buyer inquiries within weeks.",
+    name: "Eleanor Vance",
+    role: "Head of Marketing, GreenNest Realty",
+  },
+  {
+    quote: "Selio captured the soul of haute couture in digital form. The dark gold aesthetic, fluid animations, and effortless shopping flow exceeded every expectation. Our online boutique now matches our Paris showroom.",
+    name: "Marcus Vance",
+    role: "Creative Director, Fashnova",
+  },
+  {
     quote: "Selio completely transformed our digital presence. Their cinematic approach to our brand storytelling resulted in a 300% increase in user engagement and record-breaking conversions.",
     name: "Abdul Salam",
     role: "Founder, Rensol",
@@ -16,11 +26,6 @@ const testimonials = [
     quote: "Working with Selio was a game changer. Their SEO strategy tripled our organic traffic in just four months and the new website converts like crazy.",
     name: "Anirudhan B S",
     role: "Founder, corepro Techno LLP",
-  },
-  {
-    quote: "Our social media ROI increased by 250% within the first three months of working with Selio. Their data-driven approach to digital marketing and targeting was spot on.",
-    name: "Durga S",
-    role: "Founder, glamtrinkets",
   },
   {
     quote: "The PPC campaigns managed by Selio delivered an outstanding acquisition cost reduction. They are strategic, creative, and highly analytical in their digital marketing efforts.",
@@ -38,17 +43,17 @@ export function Testimonials() {
       <div className="container mx-auto px-6 md:px-12 mb-16">
         <div className="max-w-3xl">
           <h2 className="text-4xl md:text-6xl font-heading font-bold text-white mb-6 flex flex-wrap leading-tight">
-            <BlurText 
-              text="Client" 
-              animateBy="letters" 
-              delay={20} 
+            <BlurText
+              text="Client"
+              animateBy="letters"
+              delay={20}
               className="inline-flex mr-3"
             />
             <span className="text-brand-violet">
-              <BlurText 
-                text="Stories." 
-                animateBy="letters" 
-                delay={20} 
+              <BlurText
+                text="Stories."
+                animateBy="letters"
+                delay={20}
                 className="inline-flex"
               />
             </span>
