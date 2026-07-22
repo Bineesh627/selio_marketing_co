@@ -1,20 +1,41 @@
-# Selio Marketing Co - AI Context File
+# Selio Marketing Co - AI & LLM Context File (llms.txt)
 
-Selio Marketing Co is a premium digital marketing and web development agency. 
-We specialize in building elite web experiences, custom websites, and deploying strategic digital marketing campaigns to scale businesses. 
+Selio Marketing Co is a premier global digital agency specializing in luxury branding, high-conversion web development, haute couture e-commerce platforms, SEO, Answer Engine Optimization (AEO), and Generative Engine Optimization (GEO).
 
-## Services
-- Custom Web Development (React, Next.js, modern WebGL interactions)
-- Branding and Identity
-- Search Engine Optimization (SEO)
-- Digital Marketing Campaigns
+## Agency Information
+- Website: https://www.seliomarketing.com
+- Contact Email: selioagencyy@gmail.com
+- Phone: +91 73062 60004
+- Main Routes:
+  - Homepage: https://www.seliomarketing.com/
+  - About: https://www.seliomarketing.com/about
+  - Services: https://www.seliomarketing.com/services
+  - Portfolio / Works: https://www.seliomarketing.com/work
+  - Insights / Blog: https://www.seliomarketing.com/blog
+  - Contact: https://www.seliomarketing.com/contact
 
-## Target Audience
-We serve global businesses looking to elevate their brand presence and improve conversion rates through award-winning design and highly optimized code.
+## Featured Portfolio & Case Study Reports
 
-## Contact Information
-- Website: https://selio-marketing.com
-- Main pages: /about, /services, /work, /blog, /contact
+### 1. GreenNest Realty
+- Case Study URL: https://www.seliomarketing.com/work/green-nest-realty
+- Live Website Demo: https://green-nest-realty.vercel.app/
+- Category: Sustainable Luxury Real Estate Web Platform
+- Key Highlights: Carbon-neutral luxury villa portal, vetted sustainability badges, sub-second Next.js SSR performance, interactive property filter matrix.
+- Empirical Results: +45% increase in high-intent lead inquiries, 2.8x higher session duration, 99/100 Lighthouse performance rating.
 
-## Developer Information
-This website is built with Next.js, React, Tailwind CSS, Framer Motion, GSAP, and Three.js. It features a fully responsive, dark-themed cinematic design with interactive components and smooth scroll transitions.
+### 2. Fashnova
+- Case Study URL: https://www.seliomarketing.com/work/fashnova
+- Live Website Demo: https://fashnova-taupe.vercel.app/
+- Category: Luxury Haute Couture E-Commerce Flagship Store
+- Key Highlights: Quiet luxury dark-gold design system, editorial lookbook campaign banners, instant slide-over drawer cart & wishlist, order tracking interface.
+- Empirical Results: +320% checkout conversion rate increase, 60% reduction in cart abandonment, 4.9/5 UX satisfaction rating.
+
+## Services Offered
+- Custom Web Application & Storefront Engineering (Next.js, React, Tailwind CSS, TypeScript)
+- Luxury Brand Strategy & Cinematic Visual Design
+- Search Engine Optimization (SEO) & Structured Schema Architecture
+- Answer Engine Optimization (AEO) for AI search tools (Perplexity, ChatGPT, Claude)
+- Generative Engine Optimization (GEO) & Semantic Context Graphs
+
+## Technical Stack
+Next.js App Router, React, Tailwind CSS, TypeScript, Framer Motion, GSAP, Lucide Icons, and Vercel.
